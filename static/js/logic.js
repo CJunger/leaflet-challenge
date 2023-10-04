@@ -91,5 +91,33 @@ function createMap(earthquakes) {
     collapsed: false
   }).addTo(myMap);
 
-}
 
+  //add legend to map
+  let legend = L.control({ position: "bottomright" });
+
+    legend.onAdd = function (myMap) {
+      let div = L.DomUtil.create("div", "info legend");
+
+    let grades = [-10, 10, 30, 50, 70, 90];
+    let colors = [
+      "#98ee00",
+      "#d4ee00",
+      "#eecc00",
+      "#ee9c00",
+      "#ea822c",
+      "#ea2c2c"];
+
+      for (var i = 0; i < grades.length; i++) {
+        div.innerHTML += '<i style="background: '
+        + colors[i]
+        + "'></i> "
+        + grades[i] 
+        + (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
+        }
+  
+
+      return div;
+  
+    };
+  legend.addTo(myMap);
+}

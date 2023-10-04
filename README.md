@@ -9,8 +9,8 @@ Then using D3 I queried the URL.
 
 ## Visualization
 
-After importing the data I used Leaflet to create a map that plots all the earthwuakes from your dataset based on their longitude and latitude.  The data markers
-indicate the size and depth of the earthquake by color. Earthquakes with higher magnitudes appear larger and earthquakes with greater depth appear in color scale. 
+After importing the data I used Leaflet to create a map that plots all the earthwuakes from your dataset based on their longitude and latitude.  
+The data markers indicate the size and depth of the earthquake by color. Earthquakes with higher magnitudes appear larger and earthquakes with greater depth appear in color scale. 
 Also included are popups that provide additional information about the earthquake when its associated marker is clicked.
 
 ### Technologies used:
